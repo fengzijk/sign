@@ -5,7 +5,7 @@
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@gmail.com
  *   @Version    V1.0
- *   @Date:   2022年08月28日 03时33分
+ *   date:   2022年08月28日 03时33分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
  *   Date                  Author        Version        Description
@@ -15,7 +15,7 @@
  *
  */
 
-package com.calf.cloud.demo.sign;
+package com.fengzijk.sign;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -27,7 +27,7 @@ import java.time.format.DateTimeFormatter;
  * <pre>签名工具类</pre>
  *
  * @author guozhifeng
- * @date 2022/8/28 3:14
+ * date 2022/8/28 3:14
  */
 public class SignUtils {
 
@@ -36,8 +36,6 @@ public class SignUtils {
      * <pre>获取当前时间格式化字符串</pre>
 
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:15
     */
     public static String getTodayDateTime() {
         DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
@@ -53,8 +51,7 @@ public class SignUtils {
      *
      * @param cs 字符串
      * @return boolean
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:16
+
     */
     public static boolean isBlank(CharSequence cs) {
         int strLen = cs == null ? 0 : cs.length();
@@ -75,8 +72,6 @@ public class SignUtils {
      *
      * @param cs 字符串
      * @return boolean
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:16
      */
     public static boolean isNotBlank(final CharSequence cs) {
         return !isBlank(cs);
@@ -89,8 +84,6 @@ public class SignUtils {
      *
      * @param src 字符串
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:17
     */
     public static String md5Hex(String src) {
         try {
@@ -121,8 +114,6 @@ public class SignUtils {
      *
      * @param str 加密后的报文
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:18
     */
     public static String sha256Hex(String str) {
 
@@ -151,8 +142,6 @@ public class SignUtils {
      *
      * @param bytes 数组
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:19
     */
     private static String byte2Hex(byte[] bytes) {
 

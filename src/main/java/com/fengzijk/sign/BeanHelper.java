@@ -5,7 +5,7 @@
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@gmail.com
  *   @Version    V1.0
- *   @Date:   2022年08月28日 03时33分
+ *   date:   2022年08月28日 03时33分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
  *   Date                  Author        Version        Description
@@ -15,7 +15,7 @@
  *
  */
 
-package com.calf.cloud.demo.sign;
+package com.fengzijk.sign;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -27,7 +27,7 @@ import java.util.Map;
  * <pre>反射工具类</pre>
  *
  * @author guozhifeng
- * @date 2022/8/28 3:21
+ * date 2022/8/28 3:21
  */
 
 public class BeanHelper {
@@ -38,8 +38,6 @@ public class BeanHelper {
      *
      * @param field 字段
      * @return java.lang.Boolean
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:21
      */
     private static Boolean needFilterField(Field field) {
         // 过滤静态属性
@@ -57,8 +55,6 @@ public class BeanHelper {
      *
      * @param bean 对象
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:07
      */
     public static String getSignType(Object bean) {
         if (bean != null) {
@@ -94,11 +90,9 @@ public class BeanHelper {
     /**
      * <pre>获取值</pre>
      *
-     * @param bean 对象
+     * @param bean   对象
      * @param objKey 值
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:22
      */
     public static String getValue(Object bean, String objKey) {
         List<Field> fields = getFieldList(bean);
@@ -127,10 +121,8 @@ public class BeanHelper {
      * <pre>利用Java反射根据类的名称获取属性信息和父类的属性信息</pre>
      *
      * @param obj 对象
-     * @return java.util.List<java.lang.reflect.Field>
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:23
-    */
+     * @return List
+     */
     public static List<Field> getFieldList(Object obj) {
         List<Field> fieldList = new LinkedList<>();
         Class<?> clazz = obj.getClass();
@@ -154,8 +146,6 @@ public class BeanHelper {
      *
      * @param clazz     类
      * @param fieldList 字段集合
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:22
      */
     private static void getParentField(Class<?> clazz, List<Field> fieldList) {
         Class<?> superClazz = clazz.getSuperclass();

@@ -5,7 +5,7 @@
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@gmail.com
  *   @Version    V1.0
- *   @Date:   2022年08月28日 03时33分
+ *   date:   2022年08月28日 03时33分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
  *   Date                  Author        Version        Description
@@ -15,10 +15,10 @@
  *
  */
 
-package com.calf.cloud.demo.sign;
+package com.fengzijk.sign;
 
 
-import com.calf.cloud.demo.pojo.dto.UserSignInfoDTO;
+
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -33,7 +33,7 @@ import java.util.Set;
  * <pre>签名工具类</pre>
  *
  * @author guozhifeng
- * @date 2022/8/28 4:00
+ * date 2022/8/28 4:00
  */
 public class SignatureUtils {
 
@@ -47,8 +47,6 @@ public class SignatureUtils {
      * <pre>验证Map参数的签名</pre>
      *
      * @param paramsMap 参数Map
-     * @author : guozhifeng
-     * @date : 2022/8/28 4:00
      */
     public static void validateByMap(Map<String, String> paramsMap) {
         if (SignUtils.isBlank(paramsMap.get(SignConstant.SIGN_APP_ID_KEY))) {
@@ -85,8 +83,6 @@ public class SignatureUtils {
      * @param paramsMap    Map参数
      * @param clientSecret 秘钥
      * @return boolean
-     * @author : guozhifeng
-     * @date : 2022/8/28 4:01
      */
     public static boolean validateSignByMap(Map<String, String> paramsMap, String clientSecret) {
         try {
@@ -112,8 +108,6 @@ public class SignatureUtils {
      * @param paramMap     Map 参数
      * @param clientSecret 秘钥
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 4:02
      */
     public static String getSignV1(Map<String, String> paramMap, String clientSecret) {
         //加密
@@ -169,8 +163,6 @@ public class SignatureUtils {
      *
      * @param bean 对象
      * @return java.lang.StringBuilder
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:56
      */
     public static StringBuilder getSignCheckContentV2(Object bean) {
         if (bean == null) {
@@ -218,8 +210,6 @@ public class SignatureUtils {
      * @param bean         对象
      * @param clientSecret 验证接口的clientSecret
      * @return java.lang.String
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:58
      */
     public static String getSignV2(Object bean, String clientSecret) {
 
@@ -286,8 +276,6 @@ public class SignatureUtils {
      * @param object       对象
      * @param clientSecret 秘钥
      * @return boolean
-     * @author : guozhifeng
-     * @date : 2022/8/28 3:58
      */
     public static boolean validateSignV2(Object object, String clientSecret) {
         try {
@@ -309,7 +297,7 @@ public class SignatureUtils {
     public static void main(String[] args) {
 
         String clientSecret = "0osTIhce7uPvDKHz6aa67bhCukaKoYl4";
-        UserSignInfoDTO userSignInfoDTO = new UserSignInfoDTO();
+        BaseSignDTO userSignInfoDTO = new BaseSignDTO();
         userSignInfoDTO.setNonce("111111111111111111");
         userSignInfoDTO.setTimestamp(SignUtils.getTodayDateTime());
         userSignInfoDTO.setAppId("guozhifeng");
