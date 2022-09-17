@@ -57,7 +57,7 @@ userInfoDTO.setAppId(appId);
 // 加签类型
 userInfoDTO.setSignType(SignatureUtils.SignType.MD5.name());
 // 时间戳
-userInfoDTO.setTimestamp(String.valueOf(System.currentTimeMillis()));
+userInfoDTO.setTimestamp(SignUtils.getTodayDateTime());
 // 随机字符串
 userInfoDTO.setNonce("hgghfgsdfdfsf");
 // 设置签名
