@@ -17,12 +17,12 @@
 
   <distributionManagement>
     <repository>
-      <id>ossrh</id> <!-- 这里的id要与maven setting.xml中server的id一致 -->
+      <id>ossrh</id>
       <name>oss nexus repository hosting</name>
       <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
     </repository>
     <snapshotRepository>
-      <id>ossrh</id> <!-- 这里的id要与maven setting.xml中server的id一致 -->
+      <id>ossrh</id>
       <name>oss nexus repository hosting</name>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
