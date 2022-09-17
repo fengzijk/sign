@@ -33,7 +33,7 @@ import java.util.Set;
  * <pre>签名工具类</pre>
  *
  * @author guozhifeng
- * date 2022/8/28 4:00
+ * @since 2022/8/28
  */
 public class SignatureUtils {
 
@@ -223,7 +223,6 @@ public class SignatureUtils {
             type = SignType.MD5;
         }
         StringBuilder sb = getSignCheckContentV2(bean);
-        System.out.println("-=========" + sb);
         //暂时不需要个人认证
         sb.append(SignConstant.SIGN_SECRET_KEY + "=").append(clientSecret);
         String signStr = "";
@@ -288,24 +287,12 @@ public class SignatureUtils {
                 return true;
             }
         } catch (Exception e) {
-            System.err.printf("validateSign error:{%s}%n", e.getMessage());
+            e.printStackTrace();
             return false;
         }
         return false;
     }
 
-    public static void main(String[] args) {
-
-        String clientSecret = "0osTIhce7uPvDKHz6aa67bhCukaKoYl4";
-        BaseSignDTO userSignInfoDTO = new BaseSignDTO();
-        userSignInfoDTO.setNonce("111111111111111111");
-        userSignInfoDTO.setTimestamp(SignUtils.getTodayDateTime());
-        userSignInfoDTO.setAppId("guozhifeng");
-        userSignInfoDTO.setSignType(SignType.MD5.name());
-        userSignInfoDTO.setSign(SignatureUtils.getSignV2(userSignInfoDTO, clientSecret));
-        System.out.println(SignatureUtils.validateSignV2(userSignInfoDTO, clientSecret));
-
-    }
 
     public enum SignType {
         /**

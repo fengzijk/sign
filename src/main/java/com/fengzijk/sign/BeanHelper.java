@@ -27,7 +27,7 @@ import java.util.Map;
  * <pre>反射工具类</pre>
  *
  * @author guozhifeng
- * date 2022/8/28 3:21
+ * @since 2022/8/28
  */
 
 public class BeanHelper {

@@ -22,7 +22,7 @@ package com.fengzijk.sign;
  * <pre>签名常量</pre>
  *
  * @author guozhifeng
- * date 2022/8/28 3:14
+ * @since 2022/8/28
  */
 public class SignConstant {
 

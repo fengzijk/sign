@@ -27,7 +27,7 @@ import java.time.format.DateTimeFormatter;
  * <pre>签名工具类</pre>
  *
  * @author guozhifeng
- * date 2022/8/28 3:14
+ * @since 2022/8/28
  */
 public class SignUtils {
 
@@ -111,7 +111,7 @@ public class SignUtils {
 
     /**
      * <pre>利用java原生的类实现SHA256加密</pre>
-     *
+     * @author fengzijk
      * @param str 加密后的报文
      * @return java.lang.String
     */

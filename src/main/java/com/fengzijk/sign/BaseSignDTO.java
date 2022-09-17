@@ -19,10 +19,13 @@ package com.fengzijk.sign;
 
 import java.io.Serializable;
 
-/**
- * @author Timothy
- */
 
+/**
+ * <pre>功能描述</pre>
+ *
+ * @author guozhifeng
+ * @since 2022/8/28
+ */
 public class BaseSignDTO implements Serializable {
 
     /**
