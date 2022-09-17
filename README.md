@@ -1,13 +1,11 @@
-# 验签工具 可使用于API以及接口
-
-## 简单,高效   不引入任何外部包
-
+# 验签工具 
+## 简单,高效   不引入任何外部包 可使用于API以及接口
 
 
-## 使用 
 
 
-### 1. 依赖
+### 使用示例
+ 
 ### Latest Version: [![Maven Central](https://img.shields.io/maven-central/v/com.fengzijk/sign.svg)](https://search.maven.org/search?q=g:com.fengzijka:sign*)
 
 
@@ -21,12 +19,11 @@
 
 
 
-### 使用示例
 
-#### 1. Object方式 加签验签
+#### Object方式 加签验签
 
 
-1.1 继承验签基础类
+##### 继承验签基础类
 ~~~java
 
 public class UserInfoDTO extends BaseSignDTO {
@@ -43,7 +40,7 @@ public class UserInfoDTO extends BaseSignDTO {
 }
 ~~~
 
-1.2 加签验签
+##### 加签验签
 ~~~ java
 
 
